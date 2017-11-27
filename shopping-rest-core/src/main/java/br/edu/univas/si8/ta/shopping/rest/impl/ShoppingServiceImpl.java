@@ -17,8 +17,8 @@ public class ShoppingServiceImpl implements ShoppingService{
 	}
 
 	@Override
-	public String saveNewDesc(String desc,timestamp time) {
-		shopping.createNewDesc(desc, time);
+	public String saveNewDesc(String desc) {
+		shopping.createNewDesc(desc);
 		return "{\"message\": \"Success\"}";
 	}
 

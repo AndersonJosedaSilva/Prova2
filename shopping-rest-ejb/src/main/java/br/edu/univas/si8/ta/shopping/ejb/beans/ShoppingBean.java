@@ -23,10 +23,10 @@ public class ShoppingBean implements ShoppingLocal, ShoppingRemote{
 	
 
 	@Override
-	public void createNewDesc(String shoppingDesc, String shoppingTime) {
+	public void createNewDesc(String shoppingDesc) {
 		Shopping shopping = new Shopping();
 		shopping.setDesc(shoppingDesc);
-		shopping.setTime(shoppingTime);
+		shopping.setTime(new Timestamp(dateNow.getTime()));
 		dao.insert(shopping);
 		
 	}
@@ -40,14 +40,7 @@ public class ShoppingBean implements ShoppingLocal, ShoppingRemote{
 				.toArray(new String[0]);
 	}
 
-	@Override
-	public String[] listShoppingTime() {
-		return dao.listAll()
-				.stream()
-				.map(Shopping::getTime)
-				.collect(Collectors.toList())
-				.toArray(new String[0]);
-	}
+	
 
 
 }

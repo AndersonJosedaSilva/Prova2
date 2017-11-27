@@ -6,7 +6,7 @@ dependencies {
 	deploy project(path: ':shopping-rest-ejb')
 	earlib project(':shopping-rest-core')
 	earlib project(':shopping-rest-api')
-	earlib project(':shopping-rest-ejb-shopping')
+	earlib project(':shopping-rest-ejb-client')
 }
 
 ear {

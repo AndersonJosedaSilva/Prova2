@@ -1,4 +1,4 @@
 
 dependencies {
-	compile project(':shopping-rest-ejb-shopping')
+	compile project(':shopping-rest-ejb-client')
 }

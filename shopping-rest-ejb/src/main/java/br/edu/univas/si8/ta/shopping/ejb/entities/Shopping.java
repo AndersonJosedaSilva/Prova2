@@ -1,5 +1,8 @@
 package br.edu.univas.si8.ta.shopping.ejb.entities;
 
+import java.security.Timestamp;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +19,7 @@ public class Shopping {
 	private Integer id;
 
 	private String desc;
-	private String time;
+	private Timestamp time;
 	
 	
 	public Integer getId() {
@@ -31,12 +34,16 @@ public class Shopping {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	public String getTime() {
+	public Timestamp getTime() {
 		return time;
 	}
-	public void setTime(String time) {
+	public void setTime(Timestamp time) {
 		this.time = time;
 	}
+	public Shopping time(Timestamp time) {
+		this.time = time;
+		return this;
+}
 	
 	
 
