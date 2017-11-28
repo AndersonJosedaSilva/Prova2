@@ -1,5 +1,7 @@
 package br.edu.univas.si8.ta.shopping.ejb.beans;
 
+import java.util.Date;
+import java.sql.Timestamp;
 import java.util.stream.Collectors;
 
 import javax.ejb.EJB;
@@ -25,6 +27,7 @@ public class ShoppingBean implements ShoppingLocal, ShoppingRemote{
 	@Override
 	public void createNewDesc(String shoppingDesc) {
 		Shopping shopping = new Shopping();
+		Date dateNow = new Date();
 		shopping.setDesc(shoppingDesc);
 		shopping.setTime(new Timestamp(dateNow.getTime()));
 		dao.insert(shopping);
